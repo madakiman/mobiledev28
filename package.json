@@ -1,11 +1,11 @@
 {
   "version": "5.1.1",
-  "name": "cordova-plugin-googleplus",
-  "cordova_name": "Google SignIn",
+  "name": "cordova-plugin-googleplus_dev28",
+  "cordova_name": "Google SignIn Dev28",
   "description": "Use your Google account to authenticate with the app.",
   "license": "MIT",
-  "repo": "https://github.com/EddyVerbruggen/cordova-plugin-googleplus.git",
-  "issue": "https://github.com/EddyVerbruggen/cordova-plugin-googleplus/issues",
+  "repo": "https://github.com/madakiman/mobiledev28.git",
+  "issue": "https://github.com/madakiman/mobiledev28/issues",
   "keywords": [
     "Google",
     "Google SignIn",
