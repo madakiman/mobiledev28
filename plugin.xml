@@ -16,7 +16,7 @@
 
   <repo>https://github.com/madakiman/mobiledev28.git</repo>
 
-  <issue>https://github.com/EddyVerbruggen/cordova-plugin-googleplus/issues</issue>
+  <issue>https://github.com/madakiman/mobiledev28/issues</issue>
 
   <engines>
     <engine name="cordova" version=">=3.5.0"/>
