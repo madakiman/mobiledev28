@@ -1,6 +1,6 @@
 {
   "version": "5.1.1",
-  "name": "cordova-plugin-googleplus_dev28",
+  "name": "cordova-plugin-googleplus-dev28",
   "cordova_name": "Google SignIn Dev28",
   "description": "Use your Google account to authenticate with the app.",
   "license": "MIT",
