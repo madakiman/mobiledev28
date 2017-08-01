@@ -332,9 +332,10 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
                 result.put("userId", acct.getId());
                 result.put("displayName", acct.getDisplayName());
                 result.put("familyName", acct.getFamilyName());
-                //result.put("givenName", acct.getGivenName());
-		result.put("givenName", "Ace");
-		result.put("jumName", "Ace");			
+                result.put("givenName", acct.getGivenName());
+		
+		result.put("accessToken", acct.getAccessToken());    
+		    
                 result.put("imageUrl", acct.getPhotoUrl());
 
                 this.savedCallbackContext.success(result);
