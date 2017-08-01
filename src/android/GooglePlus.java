@@ -309,6 +309,16 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
                     Context context = cordova.getActivity().getApplicationContext();
                     String accessToken = null;
                     try {
+                        
+                        //Edited by Heon
+                        Person person  = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
+                        if (person != null) {
+                            Log.i(TAG, person.getDisplayName());    //returns full name successfully
+                            Log.i(TAG, person.getGender());         //0
+                            Log.i(TAG, person.getBirthday());       //null
+                        }
+                        
+                        
                         Log.i(TAG, "trying to get account information");
                         try {
                             if (lastAccessToken != null) {
@@ -338,7 +348,6 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
                         result.put("familyName", acct.getFamilyName());
                         result.put("givenName", acct.getGivenName());
                         
-                        result.put("gender",acct.getGender());
                         result.put("imageUrl", acct.getPhotoUrl());
 
                         
