@@ -27,7 +27,7 @@ import android.os.AsyncTask;
 import android.content.Context;
 
 
-import com.google.android.gms.plus.model.people;
+import com.google.android.gms.plus.model.people.Person;
 
 /**
  * Originally written by Eddy Verbruggen (http://github.com/EddyVerbruggen/cordova-plugin-googleplus)
