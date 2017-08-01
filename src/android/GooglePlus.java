@@ -30,7 +30,7 @@ import java.util.Date;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.PlusOneButton;
 import com.google.android.gms.plus.model.people.Person;
-
+a
 /**
  * Originally written by Eddy Verbruggen (http://github.com/EddyVerbruggen/cordova-plugin-googleplus)
  * Forked/Duplicated and Modified by PointSource, LLC, 2016.
@@ -297,11 +297,11 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
             savedCallbackContext.error("GoogleApiClient was never initialized");
             return;
         }
-
+        
         
         //Edited by Heon
-        Person person  = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
-        /*if (person != null) {
+        /*Person person  = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
+        if (person != null) {
             result.put("gender", person.getGender());
             //Log.i(TAG, person.getDisplayName());    //returns full name successfully
             //Log.i(TAG, person.getGender());         //0
@@ -384,8 +384,6 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
 
     
     }
-
-
 
     private void getSigningCertificateFingerprint() {
         String packageName = webView.getContext().getPackageName();
