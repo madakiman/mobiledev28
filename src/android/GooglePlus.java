@@ -300,6 +300,13 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
             return;
         }
         
+        try{
+            Person person  = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
+        }catch(Exception e){
+            Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), e.getMessage(), 20);
+            toast.show();        
+        }
+
         
         //Edited by Heon
         /*Person person  = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
