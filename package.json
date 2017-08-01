@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0",
+  "name": "cordova-plugin-googleplus-dev28",
+  "cordova_name": "Google SignIn Dev28",
+  "description": "Use your Google account to authenticate with the app.",
+  "license": "MIT",
+  "repo": "https://github.com/madakiman/mobiledev28.git",
+  "issue": "https://github.com/madakiman/mobiledev28/issues",
+  "keywords": [
+    "Google",
+    "Google SignIn",
+    "Google Sign In",
+    "GoogleSignIn",
+    "Google Login",
+    "Google Plus",
+    "Login",
+    "OAuth",
+    "Identity",
+    "Authentication",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "platforms": [
+    "android",
+    "ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.5.0"
+    }
+  ],
+  "main": "GooglePlus.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madakiman/mobiledev28.git"
+  },
+  "author": "mobiledev28",
+  "bugs": {
+    "url": "https://github.com/madakiman/mobiledev28/issues"
+  },
+  "homepage": "https://github.com/madakiman/mobiledev28#readme"
+}
