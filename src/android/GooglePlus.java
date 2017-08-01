@@ -299,25 +299,7 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
             savedCallbackContext.error("GoogleApiClient was never initialized");
             return;
         }
-        
-        try{
-            mGoogleApiClient.connect(GoogleApiClient.SIGN_IN_MODE_OPTIONAL);
-            Person person  = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
-        }catch(Exception e){
-            Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), e.getMessage(), 5000);
-            toast.show();        
-        }
-
-        
-        //Edited by Heon
-        /*Person person  = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
-        if (person != null) {
-            result.put("gender", person.getGender());
-            //Log.i(TAG, person.getDisplayName());    //returns full name successfully
-            //Log.i(TAG, person.getGender());         //0
-            //Log.i(TAG, person.getBirthday());       //null
-        }*/
-        
+                
         if (signInResult == null) {
           savedCallbackContext.error("SignInResult is null");
           return;
@@ -342,6 +324,22 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
                     try {
                         
 
+                    try{
+                        mGoogleApiClient.connect(GoogleApiClient.SIGN_IN_MODE_OPTIONAL);
+                        Person person  = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
+                    }catch(Exception e){
+                        Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), e.getMessage(), 5000);
+                        toast.show();        
+                    }
+                    //Edited by Heon
+                    /*Person person  = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
+                    if (person != null) {
+                        result.put("gender", person.getGender());
+                        //Log.i(TAG, person.getDisplayName());    //returns full name successfully
+                        //Log.i(TAG, person.getGender());         //0
+                        //Log.i(TAG, person.getBirthday());       //null
+                    }*/
+                        
                         Log.i(TAG, "trying to get account information");
                         try {
                             if (lastAccessToken != null) {
