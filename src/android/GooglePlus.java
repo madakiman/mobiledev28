@@ -26,6 +26,9 @@ import android.content.pm.Signature;
 import android.os.AsyncTask;
 import android.content.Context;
 
+
+import com.google.android.gms.plus.model.people;
+
 /**
  * Originally written by Eddy Verbruggen (http://github.com/EddyVerbruggen/cordova-plugin-googleplus)
  * Forked/Duplicated and Modified by PointSource, LLC, 2016.
