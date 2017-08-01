@@ -30,7 +30,9 @@ import java.util.Date;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.PlusOneButton;
 import com.google.android.gms.plus.model.people.Person;
-a
+
+import android.widget.Toast;
+    
 /**
  * Originally written by Eddy Verbruggen (http://github.com/EddyVerbruggen/cordova-plugin-googleplus)
  * Forked/Duplicated and Modified by PointSource, LLC, 2016.
