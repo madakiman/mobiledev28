@@ -26,12 +26,15 @@ import android.content.pm.Signature;
 import android.os.AsyncTask;
 import android.content.Context;
 
+import com.google.android.gms.plus.Plus;
+import com.google.android.gms.plus.PlusOneButton;
 import com.google.android.gms.plus.model.people.Person;
 
 /**
  * Originally written by Eddy Verbruggen (http://github.com/EddyVerbruggen/cordova-plugin-googleplus)
  * Forked/Duplicated and Modified by PointSource, LLC, 2016.
  */
+
 public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConnectionFailedListener {
 
     public static final String ACTION_IS_AVAILABLE = "isAvailable";
