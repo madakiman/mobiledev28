@@ -298,6 +298,16 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
             return;
         }
 
+        
+        //Edited by Heon
+        Person person  = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
+        /*if (person != null) {
+            result.put("gender", person.getGender());
+            //Log.i(TAG, person.getDisplayName());    //returns full name successfully
+            //Log.i(TAG, person.getGender());         //0
+            //Log.i(TAG, person.getBirthday());       //null
+        }*/
+        
         if (signInResult == null) {
           savedCallbackContext.error("SignInResult is null");
           return;
@@ -321,16 +331,7 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
                     String accessToken = null;
                     try {
                         
-                        //Edited by Heon
-                        Person person  = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
-                        /*if (person != null) {
-                            result.put("gender", person.getGender());
-                            //Log.i(TAG, person.getDisplayName());    //returns full name successfully
-                            //Log.i(TAG, person.getGender());         //0
-                            //Log.i(TAG, person.getBirthday());       //null
-                        }*/
-                        
-                        
+
                         Log.i(TAG, "trying to get account information");
                         try {
                             if (lastAccessToken != null) {
