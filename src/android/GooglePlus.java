@@ -27,9 +27,9 @@ import android.os.AsyncTask;
 import android.content.Context;
 
 import java.util.Date;
-//import com.google.android.gms.plus.Plus;
-//import com.google.android.gms.plus.PlusOneButton;
-//import com.google.android.gms.plus.model.people.Person;
+import com.google.android.gms.plus.Plus;
+import com.google.android.gms.plus.PlusOneButton;
+import com.google.android.gms.plus.model.people.Person;
 
 /**
  * Originally written by Eddy Verbruggen (http://github.com/EddyVerbruggen/cordova-plugin-googleplus)
