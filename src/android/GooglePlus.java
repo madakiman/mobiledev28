@@ -169,7 +169,7 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
             .addApi(Plus.API);*/
             
           mGoogleApiClient = new GoogleApiClient.Builder(webView.getContext())
-                .addConnectionCallbacks(webView.getContext())
+                .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(webView.getContext())
                 .addScope(Plus.SCOPE_PLUS_LOGIN)
                 .addScope(Plus.SCOPE_PLUS_PROFILE)
