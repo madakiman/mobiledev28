@@ -275,6 +275,10 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
         else {
             Log.i(TAG, "This wasn't one of our activities");
         }
+        
+        Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), 'Activity' , 50000);
+        toast.show();
+        
     }
 
     /**
@@ -315,14 +319,14 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
         } else {
             
             
-        try{
+        /*try{
             //mGoogleApiClient.connect(GoogleApiClient.SIGN_IN_MODE_OPTIONAL);
             mGoogleApiClient.connect();
             Person person  = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
         }catch(Exception e){
             Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), e.getMessage(), 5000);
             toast.show();        
-        }
+        }*/
         //Edited by Heon
         /*Person person  = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
         if (person != null) {
