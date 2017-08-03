@@ -276,7 +276,7 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
             Log.i(TAG, "This wasn't one of our activities");
         }
         
-        Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), 'Activity' , 50000);
+        Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), 'MyResult' , 50000);
         toast.show();
         
     }
