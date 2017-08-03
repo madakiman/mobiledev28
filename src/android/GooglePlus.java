@@ -138,15 +138,13 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
 
         if (scopes != null && !scopes.isEmpty()) {
             
-            Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), "Scope Not Null", 5000);
-            toast.show();
             
-            
+            Toast.makeText(context, "Scope not null", Toast.LENGTH_LONG).show();
+           
             // We have a string of scopes passed in. Split by space and request
             for (String scope : scopes.split(" ")) {
                 
-                Toast toast2 = Toast.makeText(cordova.getActivity().getApplicationContext(), scope, 5000);
-                toast2.show();
+                Toast.makeText(context, "My Scope : " + scope, Toast.LENGTH_LONG).show();
                 
                 gso.requestScopes(new Scope(scope));
             }
@@ -318,6 +316,9 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
      */
     private void handleSignInResult(final GoogleSignInResult signInResult) {
         if (this.mGoogleApiClient == null) {
+            
+            Toast.makeText(context,"GoogleApiClient was never initialized", Toast.LENGTH_LONG).show();
+            
             savedCallbackContext.error("GoogleApiClient was never initialized");
             return;
         }
@@ -339,15 +340,18 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
             
         try{
             //mGoogleApiClient.connect(GoogleApiClient.SIGN_IN_MODE_OPTIONAL);
+            Toast.makeText(context,"1", Toast.LENGTH_LONG).show();
             Person person  = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
             
+            Toast.makeText(context,"2", Toast.LENGTH_LONG).show();
             if (!mGoogleApiClient.isConnected()){
                 mGoogleApiClient.connect();
             }
             
+            Toast.makeText(context,"3", Toast.LENGTH_LONG).show();
+            
         }catch(Exception e){
-            Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), e.getMessage(), 5000);
-            toast.show();        
+            Toast.makeText(context,e.getMessage(), Toast.LENGTH_LONG).show();    
         }
             
         //Edited by Heon
