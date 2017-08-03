@@ -137,6 +137,11 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
         String scopes = clientOptions.optString(ARGUMENT_SCOPES, null);
 
         if (scopes != null && !scopes.isEmpty()) {
+            
+            Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), "Scope Not Null", 5000);
+            toast.show();
+            
+            
             // We have a string of scopes passed in. Split by space and request
             for (String scope : scopes.split(" ")) {
                 gso.requestScopes(new Scope(scope));
