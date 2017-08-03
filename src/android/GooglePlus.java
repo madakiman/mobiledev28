@@ -183,7 +183,9 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
                 .build();*/
         
         this.mGoogleApiClient = builder.build();
-
+        
+        mGoogleApiClient.connect();
+        
         Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), "API Build", 5000);
         toast.show();
         
@@ -342,10 +344,10 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
             //mGoogleApiClient.connect(GoogleApiClient.SIGN_IN_MODE_OPTIONAL);
             Toast.makeText(cordova.getActivity().getApplicationContext(),"1", Toast.LENGTH_LONG).show();
             
-            if (!mGoogleApiClient.isConnected()){
+            /*if (!mGoogleApiClient.isConnected()){
                 Toast.makeText(cordova.getActivity().getApplicationContext(),"Connecting.....", Toast.LENGTH_LONG).show();
                 mGoogleApiClient.connect(GoogleApiClient.SIGN_IN_MODE_REQUIRED);
-            }
+            }*/
             
             Toast.makeText(cordova.getActivity().getApplicationContext(),"2", Toast.LENGTH_LONG).show();
             
