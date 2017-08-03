@@ -139,12 +139,12 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
         if (scopes != null && !scopes.isEmpty()) {
             
             
-            Toast.makeText(context, "Scope not null", Toast.LENGTH_LONG).show();
+            Toast.makeText(cordova.getActivity().getApplicationContext(), "Scope not null", Toast.LENGTH_LONG).show();
            
             // We have a string of scopes passed in. Split by space and request
             for (String scope : scopes.split(" ")) {
                 
-                Toast.makeText(context, "My Scope : " + scope, Toast.LENGTH_LONG).show();
+                Toast.makeText(cordova.getActivity().getApplicationContext(), "My Scope : " + scope, Toast.LENGTH_LONG).show();
                 
                 gso.requestScopes(new Scope(scope));
             }
@@ -317,7 +317,7 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
     private void handleSignInResult(final GoogleSignInResult signInResult) {
         if (this.mGoogleApiClient == null) {
             
-            Toast.makeText(context,"GoogleApiClient was never initialized", Toast.LENGTH_LONG).show();
+            Toast.makeText(cordova.getActivity().getApplicationContext(),"GoogleApiClient was never initialized", Toast.LENGTH_LONG).show();
             
             savedCallbackContext.error("GoogleApiClient was never initialized");
             return;
@@ -340,18 +340,18 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
             
         try{
             //mGoogleApiClient.connect(GoogleApiClient.SIGN_IN_MODE_OPTIONAL);
-            Toast.makeText(context,"1", Toast.LENGTH_LONG).show();
+            Toast.makeText(cordova.getActivity().getApplicationContext(),"1", Toast.LENGTH_LONG).show();
             Person person  = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
             
-            Toast.makeText(context,"2", Toast.LENGTH_LONG).show();
+            Toast.makeText(cordova.getActivity().getApplicationContext(),"2", Toast.LENGTH_LONG).show();
             if (!mGoogleApiClient.isConnected()){
                 mGoogleApiClient.connect();
             }
             
-            Toast.makeText(context,"3", Toast.LENGTH_LONG).show();
+            Toast.makeText(cordova.getActivity().getApplicationContext(),"3", Toast.LENGTH_LONG).show();
             
         }catch(Exception e){
-            Toast.makeText(context,e.getMessage(), Toast.LENGTH_LONG).show();    
+            Toast.makeText(cordova.getActivity().getApplicationContext(),e.getMessage(), Toast.LENGTH_LONG).show();    
         }
             
         //Edited by Heon
