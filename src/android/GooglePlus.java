@@ -144,6 +144,10 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
             
             // We have a string of scopes passed in. Split by space and request
             for (String scope : scopes.split(" ")) {
+                
+                Toast toast2 = Toast.makeText(cordova.getActivity().getApplicationContext(), scope, 5000);
+                toast2.show();
+                
                 gso.requestScopes(new Scope(scope));
             }
         }
