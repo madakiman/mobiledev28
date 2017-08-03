@@ -163,20 +163,23 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
             .addOnConnectionFailedListener(this)
             .addApi(Auth.GOOGLE_SIGN_IN_API, gso.build());*/
         //Edited By Heon
-        /*GoogleApiClient.Builder builder = new GoogleApiClient.Builder(webView.getContext())
+        GoogleApiClient.Builder builder = new GoogleApiClient.Builder(webView.getContext())
             .addOnConnectionFailedListener(this)
             .addApi(Auth.GOOGLE_SIGN_IN_API, gso.build())
-            .addApi(Plus.API);*/
+            .addApi(Plus.API);
             
-          mGoogleApiClient = new GoogleApiClient.Builder(webView.getContext())
+          /*mGoogleApiClient = new GoogleApiClient.Builder(webView.getContext())
                 .addOnConnectionFailedListener(this)
                 .addScope(Plus.SCOPE_PLUS_LOGIN)
                 .addScope(Plus.SCOPE_PLUS_PROFILE)
                 .addApi(Plus.API)
-                .build();
+                .build();*/
         
-        //this.mGoogleApiClient = builder.build();
+        this.mGoogleApiClient = builder.build();
 
+        Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), "API Build", 5000);
+        toast.show();
+        
         Log.i(TAG, "GoogleApiClient built");
     }
 
@@ -283,8 +286,7 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
             Log.i(TAG, "This wasn't one of our activities");
         }
         
-        //Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), "MyResult", 5000);
-        //toast.show();
+
         
     }
 
