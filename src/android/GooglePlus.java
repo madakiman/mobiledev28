@@ -344,7 +344,7 @@ public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConne
             
             if (!mGoogleApiClient.isConnected()){
                 Toast.makeText(cordova.getActivity().getApplicationContext(),"Connecting.....", Toast.LENGTH_LONG).show();
-                mGoogleApiClient.connect();
+                mGoogleApiClient.connect(GoogleApiClient.SIGN_IN_MODE_OPTIONAL);
             }
             
             Toast.makeText(cordova.getActivity().getApplicationContext(),"2", Toast.LENGTH_LONG).show();
